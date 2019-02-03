@@ -1,0 +1,51 @@
+{% load static %}
+{% load staticfiles %}
+<html>
+    <head>
+        
+        <title> CAT BlOG</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+    </head>
+    <body>
+            <div class= container>
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'armpare.jpg' %}" height=180 class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h1 class="card-text"><a href="{% url 'post_list'%}">ARMPARE</a></h1>
+                    </div>
+                </div>
+                   
+            <nav class="navbar navbar-light bg-light">
+                    <form class="form-inline">
+                        {% if user.is_authenticated %}
+                        <button class="btn btn-outline-success" type="button"><a href="{% url 'logout' %}">Logout</a></button>
+                        {% else %}
+                        <button class="btn btn-outline-success" type="button"><a href="{% url 'login' %}">Login</a></button>
+                        <button class="btn btn-outline-success" type="button"><a href="{% url 'signup' %}">Signup</a></button>
+                        {% endif %}
+                    </form>
+            </nav>
+            
+            <nav><br>
+                <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                          <a class="nav-link " href="{% url 'about'%}">시험</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " href="{% url 'like'%}">좋아</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " href="{% url 'hate'%}">공지사항</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{% url 'portfolio'%}">사진</a>
+                        </li>
+                          
+                        
+                </ul>
+        </div>
+        {% block content%}
+        {% endblock %}
+    </body>
+</html>

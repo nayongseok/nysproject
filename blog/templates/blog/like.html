@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<title>CAT BLOG</title>
+</head>
+
+<body>
+    <div container>
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class=container>
+<br>
+<div class="card">
+  <div class="card-body">
+    <h1>좋아하는 것</h1>
+    <h4>1.장난감<br>
+        2.닭가슴살<br>
+        3.고양이 과자<br>
+        4.푹신한 곳<br>
+        5.높은 곳<br>
+        6.비닐봉지<br>
+        7.상자<br>
+        8.소파 뜯기<br>
+       </h4>
+  </div>
+</div>
+</div>
+{% endblock%}    
+</div>
+</body>
+</html>
